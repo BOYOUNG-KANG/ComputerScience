@@ -1,2 +1,4 @@
-package list.linkedlist.implementation;public class LinkedList {
+package list.linkedlist.implementation;
+
+public class LinkedList {
 }
