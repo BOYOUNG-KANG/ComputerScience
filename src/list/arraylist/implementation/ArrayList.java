@@ -69,7 +69,7 @@ public class ArrayList {
     public ListIterator listIterator() {
     	return new ListIterator();
     }
-    class ListIterator{
+    public class ListIterator{
     	private int nextIndex = 0;
     	
     	public boolean hasNext() { //반복문의 종료 조건
@@ -94,6 +94,7 @@ public class ArrayList {
 			ArrayList.this.add(nextIndex++, element);
 		}
 		public void remove() {
+//현재 element 삭제 so next를 한번도 호출하지 않은 상태에서 삭제불가.최소 next 1번이상 호출
 			ArrayList.this.remove(nextIndex-1);
 			nextIndex--;
 		}
